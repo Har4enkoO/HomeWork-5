@@ -78,9 +78,27 @@ function getDividedByFive(...numbers) {
 }
 console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2))
 
+
+//Task #8
+function replaceBadWords(string) {
+    let bedWords= ["fuck","shit"];
+    let result = string.split(" ").map(word => {
+        let correctWord = word;
+        for(i = 0; i < bedWords.length; i++) {
+            if (word.toLowerCase().includes(bedWords[i])) {
+                correctWord = word.toLowerCase().replace(bedWords[i],"****");
+            }
+        }
+        return correctWord;
+    })
+    return result.join(" ");
+}
+console.log(replaceBadWords("Are you Fucking kidding?"))
+
 document.writeln(`Завдання №1: ${getRandomArray(3,1,100)}`,"<br \/>");
 document.writeln(`Завдання №3: ${getAverage(0,100,3.75)}`,"<br \/>");
 document.writeln(`Завдання №4: ${getMedian(4,3,2,1,5)}`,"<br \/>");
 document.writeln(`Завдання №5: ${filterEvenNumbers(1,2,3,4,5,6,7,8,9)}`,"<br \/>");
 document.writeln(`Завдання №6: ${countPositiveNumbers(1, -2, 3, -4, -5, 6,5,-5)}`,"<br \/>");
 document.writeln(`Завдання №7: ${getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`,"<br \/>");
+document.writeln(`Завдання №8: ${replaceBadWords("Are you fucking kidding?")}`,"<br \/>");
