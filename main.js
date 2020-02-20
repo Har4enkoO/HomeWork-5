@@ -95,6 +95,21 @@ function replaceBadWords(string) {
 }
 console.log(replaceBadWords("Are you Fucking kidding?"))
 
+//Task #9
+
+function divideByThree(word) {
+  let a = word;
+  let result = [];
+  while (a.length>3) {
+    result.push(a.slice(0,3));
+    a = a.slice(3);
+  }
+  result.push(a);
+  return result;
+}
+
+console.log(divideByThree("commander"))
+
 document.writeln(`Завдання №1: ${getRandomArray(3,1,100)}`,"<br \/>");
 document.writeln(`Завдання №3: ${getAverage(0,100,3.75)}`,"<br \/>");
 document.writeln(`Завдання №4: ${getMedian(4,3,2,1,5)}`,"<br \/>");
@@ -102,3 +117,4 @@ document.writeln(`Завдання №5: ${filterEvenNumbers(1,2,3,4,5,6,7,8,9)}
 document.writeln(`Завдання №6: ${countPositiveNumbers(1, -2, 3, -4, -5, 6,5,-5)}`,"<br \/>");
 document.writeln(`Завдання №7: ${getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`,"<br \/>");
 document.writeln(`Завдання №8: ${replaceBadWords("Are you fucking kidding?")}`,"<br \/>");
+document.writeln(`Завдання №9: ${divideByThree("commander")}`,"<br \/>");
